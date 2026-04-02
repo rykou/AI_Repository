@@ -1,0 +1,12 @@
+Configuration for Kimi for code to work as chat bot
+
+# Initialize Kimi client (Kimi K2.5 via Kimi Code API)
+kimi_client = OpenAI(
+    api_key=os.getenv('KIMI_API_KEY'),
+    base_url=os.getenv("KIMI_BASE_URL", "https://api.kimi.com/coding/v1"),
+    default_headers={
+        "User-Agent": "claude-code/1.0",
+        "X-Client-Name": "claude-code"
+    }
+)
+
